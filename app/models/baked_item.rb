@@ -1,0 +1,2 @@
+class BakedItem < ApplicationRecord
+end

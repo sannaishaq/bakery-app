@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import Cupcake from './Components/Cupcake';
+import Cake from './Components/Cake';
+import TreatBox from './Components/TreatBox';
+import DessertShooters from './Components/DessertShooters';
+import Navigation from './Components/Navigation';
+import { Route, Routes } from 'react-router-dom';
+import About from './Components/About';
+import Home from './Components/Home';
+import Contact from './Components/Contact';
+import Reviews from './Components/Reviews';
+import ProductsList  from './Containers/ProductsList';
+import OrderForm from './Components/OrderForm';
+// useSelector replaces connect function 
+// import {useSelector} from 'react-redux'
 
-function App() {
+
+
+
+function App(props) {
+  // const product = useSelector(state => state)
+ 
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <>     
+          <Navigation/>
+          <Routes>   
+            <Route path='/' element={<Home/>}/>  
+            <Route path='/products' element={<ProductsList/>}/>
+             <Route path='/cupcakes' element={<Cupcake/>}/>  
+             <Route path='/treatboxes' element={< TreatBox/>}/>               
+             <Route path='/customcakes' element={<Cake />}/> 
+             <Route path='/dessertshooters' element={<DessertShooters/>}/>    
+             <Route path='/reviews' element={<Reviews/>}/>   
+             <Route path='/about' element={<About/>}/>   
+             <Route path='/contactus' element={<Contact/>}/> 
+             <Route path='/placeorder' element={<OrderForm />}/> 
+          </Routes>
+       
+          
+    </>
     </div>
   );
 }
