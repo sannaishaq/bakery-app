@@ -18,8 +18,6 @@ const productsReducer = (state = initialState, action) => {
               loading: false,
               products: action.products
             }
-        
-  
           default:
             return state;
         }

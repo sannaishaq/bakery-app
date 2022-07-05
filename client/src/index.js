@@ -7,7 +7,7 @@ import { BrowserRouter} from 'react-router-dom';
 import { Provider} from 'react-redux'
 import {legacy_createStore as createStore} from 'redux'
 // createStore has been deprecated-> now is configureStore
-import { configureStore } from '@reduxjs/toolkit'
+// import { configureStore } from '@reduxjs/toolkit'
 import {combineReducers, applyMiddleware} from 'redux' 
 import thunk from 'redux-thunk'
 import productsReducer from './Reducers/ProductsReducer'

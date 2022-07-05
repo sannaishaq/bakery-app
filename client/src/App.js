@@ -11,16 +11,14 @@ import Contact from './Components/Contact';
 import Reviews from './Components/Reviews';
 import ProductsList  from './Containers/ProductsList';
 import OrderForm from './Components/OrderForm';
-// useSelector replaces connect function 
-// import {useSelector} from 'react-redux'
+import CakeForm from './Components/CakeForm';
+import CupcakeForm from './Components/CupcakeForm';
+import TreatBoxForm from './Components/TreatBoxForm';
+import DessetShooterForm from './Components/DessertShooterForm';
+import Footer from './Components/Footer';
 
+function App() {
 
-
-
-function App(props) {
-  // const product = useSelector(state => state)
- 
-  
   return (
     <div className="App">
      <>     
@@ -36,9 +34,13 @@ function App(props) {
              <Route path='/about' element={<About/>}/>   
              <Route path='/contactus' element={<Contact/>}/> 
              <Route path='/placeorder' element={<OrderForm />}/> 
+             <Route path='/cakeorderform' element={<CakeForm/>}/>
+             <Route path='/cupcakeorderform' element={<CupcakeForm/>}/>
+             <Route path='/treatboxorderform' element={<TreatBoxForm/>}/>
+             <Route path='/dessertshootersorderform' element={<DessetShooterForm/>}/>
           </Routes>
-       
-          
+          <Footer />
+         
     </>
     </div>
   );
